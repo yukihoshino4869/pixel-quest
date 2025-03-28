@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <title>Simple RPG</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <canvas id="gameCanvas" width="512" height="512"></canvas>
-  <script src="js/game.js"></script>
-</body>
-</html>
+<!-- 戦闘表示用のコンテナ（初期は非表示） -->
+<div id="battleUI" style="display:none; border:1px solid #888; padding:10px; background:#000; color:#fff;">
+  <p>敵: <span id="enemyName"></span> ｜ HP: <span id="enemyHP"></span></p>
+  <p>あなた ｜ HP: <span id="heroHP"></span> ｜ MP: <span id="heroMP"></span></p>
+  <div>
+    <button onclick="chooseAttack()">攻撃</button>
+    <button onclick="chooseMagic()">魔法</button>
+    <button onclick="chooseItem()">アイテム</button>
+    <button onclick="chooseRun()">逃げる</button>
+  </div>
+  <div id="battleLog" style="margin-top:8px; white-space:pre-wrap;"></div>
+</div>
